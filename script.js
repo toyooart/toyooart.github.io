@@ -289,24 +289,26 @@ faqQuestions.forEach(question => {
 document.addEventListener('DOMContentLoaded', () => {
     const startTime = Date.now();
 
-    // Seleccionamos todos los formularios de Netlify
-    const forms = document.querySelectorAll('form[data-netlify="true"]');
+    // Selecciona cualquier formulario que use FormBold
+    const forms = document.querySelectorAll('form[action*="formbold.com"]');
 
     forms.forEach(form => {
-        // Buscamos elementos dentro de ESTE formulario específico
         const fileInput = form.querySelector('input[type="file"]');
         const previewDiv = form.querySelector('.preview');
         const messageDiv = form.querySelector('.form-message');
         const submitBtn = form.querySelector('button[type="submit"]');
 
-        // 1. LÓGICA DE PREVISUALIZACIÓN
+        // Detectar idioma según el ID del formulario
+        const isEN = form.id.includes('EN');
+
+        // 1. PREVISUALIZACIÓN DE IMÁGENES
         if (fileInput && previewDiv) {
             fileInput.addEventListener('change', () => {
-                previewDiv.innerHTML = ''; // Limpiar
+                previewDiv.innerHTML = '';
                 const files = Array.from(fileInput.files);
 
                 if (files.length > 5) {
-                    alert(form.name.includes('EN') ? 'Max 5 images.' : 'Máximo 5 imágenes.');
+                    alert(isEN ? 'Max 5 images allowed.' : 'Máximo 5 imágenes permitidas.');
                     fileInput.value = '';
                     return;
                 }
@@ -324,16 +326,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // 2. LÓGICA DE ENVÍO (Evita la redirección)
+        // 2. ENVÍO MEDIANTE FETCH (Sin recargar página)
         form.addEventListener('submit', async (e) => {
-            e.preventDefault(); // DETIENE LA REDIRECCIÓN A OTRA PÁGINA
-
-            const isEN = form.name.includes('EN');
+            e.preventDefault();
 
             // Anti-bot: Mínimo 3 segundos para rellenar
             if ((Date.now() - startTime) < 3000) return;
 
-            // Bloquear botón
             submitBtn.disabled = true;
             const originalText = submitBtn.innerText;
             submitBtn.innerText = isEN ? "Sending..." : "Enviando...";
@@ -341,13 +340,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
 
             try {
-                const response = await fetch("/", {
+                const response = await fetch(form.action, {
                     method: "POST",
-                    body: formData
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
 
                 if (response.ok) {
-                    messageDiv.style.color = "#28a745"; // Verde
+                    messageDiv.style.color = "#28a745";
                     messageDiv.innerText = isEN ? "Success! Inquiry sent." : "¡Éxito! Consulta enviada correctamente.";
                     form.reset();
                     if (previewDiv) previewDiv.innerHTML = '';
@@ -355,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error();
                 }
             } catch (err) {
-                messageDiv.style.color = "#dc3545"; // Rojo
+                messageDiv.style.color = "#dc3545";
                 messageDiv.innerText = isEN ? "Error. Please try again." : "Hubo un error. Inténtalo de nuevo.";
             } finally {
                 submitBtn.disabled = false;

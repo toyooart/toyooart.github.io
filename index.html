@@ -513,15 +513,10 @@
                 FORMULARIO DE CONSULTA (ES)
                 ================================= -->
                 <div class="tattoo-form-container">
-                    <form name="tattooFormES" id="tattooFormES" method="POST" data-netlify="true"
-                        data-netlify-honeypot="bot-field" enctype="multipart/form-data" class="tattoo-form">
-
-                        <input type="hidden" name="form-name" value="tattooFormES">
+                    <!-- ID único para español -->
+                    <form action="https://formbold.com" id="tattooFormES" method="POST" enctype="multipart/form-data"
+                        class="tattoo-form">
                         <input type="hidden" name="timestamp" id="timestampES">
-
-                        <p style="display:none;">
-                            <label>No rellenar: <input name="bot-field"></label>
-                        </p>
 
                         <h2>Consulta de Tatuaje</h2>
 
@@ -540,7 +535,6 @@
                         <div class="form-group">
                             <label>Sube imágenes (máx. 5)</label>
                             <input type="file" name="images[]" id="imagesES" multiple accept="image/*">
-                            <!-- IMPORTANTE: El JS usará esta clase 'preview' -->
                             <div class="preview"
                                 style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; min-height: 10px;">
                             </div>
@@ -554,12 +548,11 @@
                             </label>
                         </div>
 
-                        <!-- IMPORTANTE: El JS usará esta clase 'form-message' -->
                         <div class="form-message" style="margin: 10px 0; font-weight: bold;"></div>
-
                         <button type="submit">Enviar consulta</button>
                     </form>
                 </div>
+
 
                 <!-- WhatsApp -->
                 <div class="contact-info">
