@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Meta Tags Básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Toyooner — Tatuador de realismo, blackwork dark, Guest en Barcelona</title>
+    <meta name="description"
+        content="Jose Toyo (Toyooner) - Tatuador profesional especializado en realismo, blackwork y estilo dark en Barcelona. Reserva tu cita personalizada. Diseños únicos y profesionales.">
+    <meta name="keywords"
+        content="tatuador Barcelona, realismo tattoo, blackwork Barcelona, tatuajes dark, fine line, Toyooner, Jose Toyo, tatuajes personalizados Barcelona">
+    <meta name="author" content="Jose Toyo - Toyooner">
+
+    <!-- URL Canónica -->
+    <link rel="canonical" href="https://toyooner.com">
+    <link rel="alternate" hreflang="es" href="https://toyooner.com/index.html" />
+    <link rel="alternate" hreflang="en" href="https://toyooner.com/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://toyooner.com/index.html" />
+
+    <!-- Open Graph Tags para Redes Sociales (Instagram, WhatsApp, Facebook) -->
+    <meta property="og:title" content="Toyooner — Tatuador de realismo y blackwork dark en Barcelona">
+    <meta property="og:description"
+        content="Tatuador profesional especializado en realismo, blackwork y estilo dark en Barcelona. Diseños únicos y personalizados.">
+    <meta property="og:image" content="https://toyooner.com/images/og-image.jpg">
+    <meta property="og:url" content="https://toyooner.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Toyooner — Tatuador de realismo y blackwork dark en Barcelona">
+    <meta name="twitter:description"
+        content="Tatuador profesional especializado en realismo, blackwork y estilo dark en Barcelona.">
+    <meta name="twitter:image" content="https://toyooner.com/images/og-image.jpg">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Toyooner" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="../assets/images/logo.png" alt="Toyooner Logo" class="logo-img">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <!-- Language Switcher -->
+                <li class="language-switcher-item">
+                    <div class="language-switcher">
+                        <a href="index.html" class="lang-link active">ES</a>
+                        <span class="lang-separator">|</span>
+                        <a href="index-en.html" class="lang-link">EN</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO / HOME -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="none">
+            <source src="../assets/videos/fondohero.webm" type="video/webm">
+            <source src="../assets/videos/fondohero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Toyooner</h1>
+            <p class="hero-subtitle">Realismo / Blackwork Dark</p>
+            <p class="hero-description">Cada línea con intención >> Diseños que cuentan tu historia</p>
+            <a href="https://wa.me/34610609038?text=Hola,%20me%20gustaría%20reservar%20una%20cita" class="cta-button"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                Reservar Cita
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Explora algunos de mis tatuajes y diseños</p>
+
+            <!-- Gallery Selector -->
+            <div class="gallery-selector">
+                <button class="selector-btn active" data-target="gallery-tattoos">Tattoo</button>
+                <button class="selector-btn" data-target="gallery-designs">Diseños</button>
+            </div>
+
+            <!-- Galería Tattoos -->
+            <div class="portfolio-grid" id="gallery-tattoos">
+                <!-- Imagen 1 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo1.webp"
+                        alt="Tatuaje espalda completa de dragon en negro, Barcelona por Jose Toyo" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo2.webp" alt="Tatuaje blackwork brazo Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo3.webp" alt="Tatuaje dark gótico Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 4 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo4.webp" alt="Tatuaje realismo rostro Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 5 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo5.webp" alt="Tatuaje realismo tigre Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 6 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo6.webp" alt="Tatuaje dark realismo antebrazo Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 7 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo7.webp" alt="Tatuaje araña Barcelona Jose Toyo" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 8 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo8.webp" alt="Tatuaje blackwork Barcelona Toyooner" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 9 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo9.webp" alt="Tatuaje realismo colorBarcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 10 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo10.webp" alt="Tatuaje realismo Barcelona Toyooner" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 11 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo11.webp" alt="Tatuaje color Barcelona Jose Toyo" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 12 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo12.webp" alt="Tatuaje dark color antebrazo Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 13 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo13.webp" alt="Tatuaje realismo bíceps Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 14 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo14.webp" alt="Tatuaje color Barcelona Toyooner" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 15 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo15.webp" alt="Tatuaje rostro realista gemelo Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 16 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo16.webp" alt="Tatuaje realista dark Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 17 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo17.webp" alt="Tatuaje blackwork color Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 18 -->
+                <div class="portfolio-item" data-category="dark">
+                    <img src="../assets/images/tattoo18.webp" alt="Tatuaje dark rostro Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 19 -->
+                <div class="portfolio-item" data-category="realismo">
+                    <img src="../assets/images/tattoo19.webp" alt="Tatuaje realista antebrazo Barcelona Jose Toyo"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 20 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo20.webp" alt="Tatuaje blackwork realista Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 21 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo21.webp" alt="Tatuaje blackwork ojo Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 22 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo22.webp" alt="Tatuaje realista perroBarcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+
+                <!-- Imagen 23 -->
+                <div class="portfolio-item" data-category="blackwork">
+                    <img src="../assets/images/tattoo23.webp" alt="Tatuaje perro realista Barcelona Toyooner"
+                        loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galería Diseños -->
+            <div class="portfolio-grid" id="gallery-designs" style="display: none;">
+                <!-- Diseño 1 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño1.webp" alt="Diseño tattoo 1" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 2 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño2.webp" alt="Diseño tattoo 2" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 3 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño3.webp" alt="Diseño tattoo 3" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 4 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño4.webp" alt="Diseño tattoo 4" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 5 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño5.webp" alt="Diseño tattoo 5" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 6 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño6.webp" alt="Diseño tattoo 6" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 7 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño7.webp" alt="Diseño tattoo 7" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 8 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño8.webp" alt="Diseño tattoo 8" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 9 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño9.webp" alt="Diseño tattoo 9" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 10 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño10.webp" alt="Diseño tattoo 10" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 11 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño11.webp" alt="Diseño tattoo 11" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 12 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño12.webp" alt="Diseño tattoo 12" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 13 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño13.webp" alt="Diseño tattoo 13" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 14 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño14.webp" alt="Diseño tattoo 14" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 15 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño15.webp" alt="Diseño tattoo 15" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+                <!-- Diseño 16 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="../assets/images/diseño16.webp" alt="Diseño tattoo 16" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Imagen Expandida -->
+    <div class="modal" id="imageModal">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <button class="modal-nav modal-prev" id="modalPrev">&#10094;</button>
+        <button class="modal-nav modal-next" id="modalNext">&#10095;</button>
+        <img src="" alt="" class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../assets/images/sobremi.webp" alt="Jose Toyo - Toyooner - Tatuador en Barcelona"
+                        loading="lazy">
+                    <div class="about-image-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <h3 class="about-name">Jose Toyo</h3>
+                    <p class="about-description">
+                        Artista del tatuaje especializado en realismo y blackwork dark.
+                        Más de 13 años trabajando el tatuaje desde la técnica, el detalle y la intención.
+                    </p>
+                    <p class="about-description">
+                        Cada pieza nace de una idea, un diálogo y una lectura del cuerpo.
+                        No busco solo impactar; busco que el tatuaje tenga sentido hoy y con el paso del tiempo.
+                        Trabajo con calma y precisión.
+                        El proceso es tan importante como el resultado.
+                    <p class="about-description">
+                        Trayectoria internacional
+                        Europa · Latinoamérica >>
+                        Tu piel no es un lienzo cualquiera.
+                        El compromiso es total.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Historias plasmadas en piel</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Diseños únicos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO / RESERVAS -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Reserva Tu Cita</h2>
+            <p class="section-subtitle">Hablemos de tu próximo tatuaje</p>
+
+            <div class="contact-content">
+                <!-- Información de Contacto -->
+                <!-- ===============================
+                FORMULARIO DE CONSULTA (ES)
+                ================================= -->
+                <div class="tattoo-form-container">
+                    <form name="tattooFormES" id="tattooFormES" method="POST" data-netlify="true"
+                        data-netlify-honeypot="bot-field" enctype="multipart/form-data" class="tattoo-form">
+
+                        <input type="hidden" name="form-name" value="tattooFormES">
+                        <input type="hidden" name="timestamp" id="timestampES">
+
+                        <p style="display:none;">
+                            <label>No rellenar: <input name="bot-field"></label>
+                        </p>
+
+                        <h2>Consulta de Tatuaje</h2>
+
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="contacto" placeholder="Email / Teléfono" required>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="idea" rows="4" placeholder="Describe tu idea" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sube imágenes (máx. 5)</label>
+                            <input type="file" name="images[]" id="imagesES" multiple accept="image/*">
+                            <!-- IMPORTANTE: El JS usará esta clase 'preview' -->
+                            <div class="preview"
+                                style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; min-height: 10px;">
+                            </div>
+                            <small>Máximo 10MB total.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consentimiento" required>
+                                Acepto la <a href="privacy.html" target="_blank">Política de Privacidad</a>.
+                            </label>
+                        </div>
+
+                        <!-- IMPORTANTE: El JS usará esta clase 'form-message' -->
+                        <div class="form-message" style="margin: 10px 0; font-weight: bold;"></div>
+
+                        <button type="submit">Enviar consulta</button>
+                    </form>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/34610609038?text=Hola,%20me%20gustaría%20reservar%20una%20cita"
+                                target="_blank" rel="noopener noreferrer">
+                                +34 610 609 038
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/toyooner" target="_blank" rel="noopener noreferrer">
+                                @toyooner
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Ubicación</h3>
+                            <p>Barcelona, España / (Guest)<br></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- SECCIÓN FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <p class="section-subtitle">Todo lo que necesitas saber antes de tu cita</p>
+
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cómo puedo reservar una cita?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puedes reservar tu cita contactándome directamente por WhatsApp al +34 610 609 038 o a través
+                            de Instagram @toyooner. También puedes usar el formulario de contacto en esta página. Te
+                            responderé lo antes posible para coordinar fecha y horario.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto cuesta un tatuaje?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El precio varía según el tamaño, complejidad y tiempo estimado del diseño, te daré un
+                            presupuesto personalizado después de ver tu idea y referencias.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Necesito dejar un depósito?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, se requiere un depósito para reservar tu cita. Este depósito se descuenta del
+                            precio final del tatuaje. El depósito no es reembolsable en caso de cancelación con menos de
+                            48 horas de antelación.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo tarda en sanar un tatuaje?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La sanación superficial tarda entre 2-3 semanas, pero la sanación completa puede tomar hasta
+                            2-3 meses. Te proporcionaré instrucciones detalladas de cuidado después de tu sesión. Es
+                            importante seguir estas indicaciones para asegurar la mejor sanación y resultado final.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo traer mi propio diseño?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Puedes traer tus propias ideas, referencias o diseños. Trabajaré contigo para
+                            adaptar el diseño a tu piel y asegurarme de que el resultado sea perfecto. También puedo
+                            crear diseños personalizados desde cero basándome en tus ideas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué debo hacer antes de mi cita?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Asegúrate de comer bien antes de tu cita, mantente hidratado y descansa bien la noche
+                            anterior. Evita el alcohol 24 horas antes. Usa ropa cómoda que permita acceso fácil a la
+                            zona a tatuar. Si tienes alguna condición médica o tomas medicamentos, infórmame con
+                            antelación.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo cancelar o reprogramar mi cita?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puedes reprogramar tu cita avisando con al menos 48 horas de antelación. Si cancelas con
+                            menos de 48 horas de aviso, el depósito no será reembolsable. Entiendo que pueden surgir
+                            imprevistos, así que comunícate conmigo lo antes posible si necesitas hacer cambios.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Trabajas con diseños a color o solo en negro?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajo principalmente en negro y grises, pero si tu diseño lo pide, puedo incorporar color.
+                            Cada tatuaje es único: hablemos de tu idea y encontraremos la mejor manera de hacerla
+                            realidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="../assets/images/logo.png" alt="Toyooner Logo" class="footer-logo">
+                    </a>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Barcelona, España</li>
+                        <li>tthing1312@gmail.com</li>
+                        <li><a href="https://wa.me/34610609038" target="_blank" rel="noopener noreferrer">+34 610 609
+                                038</a></li>
+                        <li><a href="https://instagram.com/toyooner" target="_blank"
+                                rel="noopener noreferrer">@toyooner</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Sígueme</h4>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/toyooner" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/34610609038" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="privacy.html" target="_blank">Aviso Legal & Política de Privacidad</a>
+                </div>
+
+                <p>&copy; 2026 Toyooner / Tattoo Portfolio</p>
+                <p>
+                    Developed by
+                    <a href="https://www.instagram.com/esc13dev" target="_blank" rel="noopener noreferrer"
+                        style="color: #9006c3; text-decoration: none; font-weight: bold;">
+                        Esc13
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/34610609038?text=Hola,%20me%20gustaría%20reservar%20una%20cita" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
