@@ -284,7 +284,7 @@ faqQuestions.forEach(question => {
 });
 
 // ========================================
-// FORMULARIOS NETLIFY (ES / EN) CON PREVIEW Y MENSAJE
+// FORMULARIOS CON PREVIEW Y MENSAJE
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     const startTime = Date.now();
