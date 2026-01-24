@@ -287,38 +287,35 @@ faqQuestions.forEach(question => {
 // FORMULARIOS CON PREVIEW Y MENSAJE
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    const startTime = Date.now();
+    const forminit = new Forminit();
+    const FORM_ID = 'rg22hvtgwqo';
 
-    // Selecciona cualquier formulario que use FormBold
-    const forms = document.querySelectorAll('form[action*="formbold.com"]');
+    // Seleccionamos ambos posibles IDs de formulario
+    const forms = document.querySelectorAll('#tattooFormES, #tattooFormEN');
 
     forms.forEach(form => {
         const fileInput = form.querySelector('input[type="file"]');
         const previewDiv = form.querySelector('.preview');
         const messageDiv = form.querySelector('.form-message');
         const submitBtn = form.querySelector('button[type="submit"]');
-
-        // Detectar idioma según el ID del formulario
         const isEN = form.id.includes('EN');
 
-        // 1. PREVISUALIZACIÓN DE IMÁGENES
+        // 1. Previsualización de imágenes
         if (fileInput && previewDiv) {
             fileInput.addEventListener('change', () => {
                 previewDiv.innerHTML = '';
                 const files = Array.from(fileInput.files);
-
                 if (files.length > 5) {
                     alert(isEN ? 'Max 5 images allowed.' : 'Máximo 5 imágenes permitidas.');
                     fileInput.value = '';
                     return;
                 }
-
                 files.forEach(file => {
                     const reader = new FileReader();
                     reader.onload = (e) => {
                         const img = document.createElement('img');
                         img.src = e.target.result;
-                        img.style.cssText = "width:70px; height:70px; object-fit:cover; border-radius:5px; border:1px solid #ccc;";
+                        img.style.cssText = "width:70px; height:70px; object-fit:cover; border-radius:5px;";
                         previewDiv.appendChild(img);
                     };
                     reader.readAsDataURL(file);
@@ -326,12 +323,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // 2. ENVÍO MEDIANTE FETCH (Sin recargar página)
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Anti-bot: Mínimo 3 segundos para rellenar
-            if ((Date.now() - startTime) < 3000) return;
+        // 2. Envío mediante Forminit SDK (FormData para soportar imágenes)
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
 
             submitBtn.disabled = true;
             const originalText = submitBtn.innerText;
@@ -339,34 +333,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(form);
 
-            try {
-                const response = await fetch(form.action, {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+            // Envío al servidor de Forminit
+            const { data, error } = await forminit.submit(FORM_ID, formData);
 
-                if (response.ok) {
-                    messageDiv.style.color = "#28a745";
-                    messageDiv.innerText = isEN ? "Success! Inquiry sent." : "¡Éxito! Consulta enviada correctamente.";
-                    form.reset();
-                    if (previewDiv) previewDiv.innerHTML = '';
-                } else {
-                    throw new Error();
-                }
-            } catch (err) {
+            if (error) {
                 messageDiv.style.color = "#dc3545";
-                messageDiv.innerText = isEN ? "Error. Please try again." : "Hubo un error. Inténtalo de nuevo.";
-            } finally {
+                messageDiv.textContent = isEN ? "Error: " + error.message : "Error: " + error.message;
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalText;
+                return;
             }
+
+            // Éxito
+            messageDiv.style.color = "#28a745";
+            messageDiv.textContent = isEN ? 'Message sent successfully!' : '¡Consulta enviada correctamente!';
+            form.reset();
+            if (previewDiv) previewDiv.innerHTML = '';
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalText;
         });
     });
 });
-
 // ========================================
 // ANIMACIONES AL HACER SCROLL (INTERSECTION OBSERVER)
 // ========================================
