@@ -1,12 +1,3 @@
-/* ========================================
-   TOYOONER - 3D HERO LOGO INTERACTIVO Y GRAVITACIONAL
-   - Carga el modelo assets/models/logoj2.glb
-   - Efecto de gravitación / flotación continua
-   - Rotación e interacción táctil / ratón con inercia
-   - Luces personalizadas del color del logo (Azul Glaciar / Ciano #A2D2FF)
-   - Optimización para dispositivos móviles (DPR cap, IntersectionObserver)
-   ======================================== */
-
 (function () {
     'use strict';
 

@@ -353,6 +353,7 @@ button {
 
 .hero-content {
     position: relative;
+    margin-top: 2.5rem;
     z-index: 1;
     padding: var(--spacing-md);
     max-width: 1000px;
@@ -1129,7 +1130,7 @@ button {
 .footer {
     background-color: #000;
     /* Negro puro */
-    padding: var(--spacing-xl) 0 var(--spacing-md);
+    padding: var(--spacing-md) 0 var(--spacing-md);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1386,6 +1387,7 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 0 ;
     }
 
 }
@@ -1725,9 +1727,9 @@ label {
 .hero-3d-wrapper {
     position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 300px;
-    margin: 0 auto 0.5rem auto;
+    max-width: 450px;
+    height: 350px;
+    margin: 0 auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1753,15 +1755,17 @@ label {
 /* Ajustes Responsivos y de Optimización Móvil */
 @media (max-width: 768px) {
     .hero-3d-wrapper {
-        max-width: 310px;
-        height: 240px;
+        max-width: 350px;
+        height: 280px;
+        margin-top: 0 !important;
         margin-bottom: 0.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero-3d-wrapper {
-        max-width: 290px;
-        height: 230px;
+        max-width: 320px;
+        height: 260px;
+        margin-top: 0 !important;
     }
 }
