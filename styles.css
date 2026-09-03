@@ -583,7 +583,7 @@ button {
     display: block;
     object-fit: cover;
     transition: transform 0.8s ease, filter 0.5s ease;
-    filter: grayscale(80%) contrast(1.1) brightness(0.9);
+    filter: grayscale(70%) contrast(1.1) brightness(0.5);
     /* Desaturación inicial */
 }
 
@@ -802,7 +802,7 @@ button {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1271,20 +1271,17 @@ button {
     right: 2rem;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    background:#25d36506;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
     z-index: 999;
     transition: var(--transition-normal);
-    animation: pulse 2s infinite;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-float svg {
@@ -1350,18 +1347,6 @@ button {
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(20px);
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
     }
 }
 
