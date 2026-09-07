@@ -26,7 +26,7 @@
     /* Negro Carbón absoluto (Background) */
     --color-bg-darker: #050505;
     /* Negro Profundo */
-    --color-bg-card: #2E2E2E;
+    --color-bg-card: #2e2e2eb6;
     /* Gris Acero oscuro (Cards/Borders) */
 
     --color-text-light: #F5F5F5;
@@ -346,8 +346,8 @@ button {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
-    z-index: -1;
-    filter: brightness(0.4) contrast(1.1) grayscale(0.1);
+    z-index: 0;
+    filter: brightness(0.3) contrast(1.1) grayscale(0.1);
     /* Ajusta brillo / contraste / saturación a tu gusto */
 }
 
@@ -573,8 +573,6 @@ button {
     break-inside: avoid;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: var(--color-bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    /* Borde casi imperceptible */
 }
 
 .portfolio-item img {
@@ -659,7 +657,6 @@ button {
     object-fit: contain;
     border-radius: 0;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     animation: zoomIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -728,9 +725,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     color: var(--color-text-gray);
-    background: rgba(10, 10, 10, 0.9);
     padding: 0.8rem 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 0.9rem;
@@ -771,6 +766,7 @@ button {
 .about-image img {
     width: 100%;
     height: 100%;
+    filter: brightness(0.7);
     object-fit: cover;
 }
 
@@ -871,7 +867,6 @@ button {
     padding: var(--spacing-md);
     background-color: var(--color-bg-card);
     border-radius: 0;
-    border: 1px solid rgba(255, 255, 255, 0.05);
     /* Borde sutil */
     transition: var(--transition-normal);
     align-items: center;
@@ -890,11 +885,10 @@ button {
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1px solid var(--color-text-gray);
     border-radius: 0;
     /* Iconos cuadrados */
     flex-shrink: 0;
-    color: var(--color-text-light);
+    color: var(--color-text-gray);
     transition: var(--transition-normal);
 }
 
@@ -904,11 +898,13 @@ button {
 }
 
 .contact-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px
 }
 
 .contact-details h3 {
+    display: flex;
+    justify-content: flex-start;
     font-size: 1rem;
     margin-bottom: 0.25rem;
     color: var(--color-text-light);
@@ -919,6 +915,8 @@ button {
 
 .contact-details p,
 .contact-details a {
+    display: flex;
+    justify-content: flex-start;
     color: var(--color-text-gray);
     line-height: 1.6;
     font-weight: 300;
@@ -1055,7 +1053,7 @@ button {
 
 .faq-list {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 25px auto;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -1067,6 +1065,10 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
     transition: var(--transition-normal);
+}
+
+.section-subtitle {
+    margin: auto;
 }
 
 .faq-item:hover {
@@ -1106,19 +1108,11 @@ button {
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: rgba(0, 0, 0, 0.2);
-    /* Fondo ligeramente más oscuro para la respuesta */
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px;
 }
 
 .faq-answer p {
-    padding: 0 var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md);
     color: var(--color-text-gray);
     line-height: 1.8;
     font-weight: 300;
@@ -1131,7 +1125,7 @@ button {
     background-color: #000;
     /* Negro puro */
     padding: var(--spacing-md) 0 var(--spacing-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.145);
 }
 
 .footer-content {
@@ -1271,7 +1265,7 @@ button {
     right: 2rem;
     width: 60px;
     height: 60px;
-    background:#25d36506;
+    background: #25d36506;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1372,7 +1366,7 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 0 ;
+        margin-top: 0;
     }
 
 }
