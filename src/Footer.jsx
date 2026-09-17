@@ -53,7 +53,7 @@ function Footer() {
                     <p>
                         Developed by{" "}
                         <a
-                            href="https://jtoyoo.github.io/"
+                            href="https://jtoyoo.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
